@@ -41,16 +41,22 @@
 .nav a:hover{
     text-decoration: underline;
 }
+.line{
+    background-color: white;
+    border: none;
+    height: 1px;
+}
 .welcome{
     width: 70%;
     padding: 2vw;
 }
 .welcome h1{
     color: #3B82F6;
-    
+    font-style: 'inria serif';
 }
 .welcome hr{
-    background:#3B82F6;
+    background-color:#3B82F6;
+    border: none;
     height: 1px;
 }
 .welcome p{
