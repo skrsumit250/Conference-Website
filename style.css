@@ -68,4 +68,10 @@
     min-height: 30vh;
     height: auto;
     background-color: #54585A;
+    text-align:center;
+    columns: white;
+}
+.Sponsers h1{
+    padding-top: 10vh;
+    color: white;
 }
