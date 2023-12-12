@@ -85,7 +85,6 @@
 }
 .Form li{
     margin: 2vh 0 0 2vh;
-    text-decoration: none;
     list-style-type: none;
     color: #3B82F6;
 }
@@ -150,5 +149,79 @@ input[type="submit"]:hover {
     }
     .Form h1{
         font-size: 5vw;
+    }
+  }
+
+
+  /* CSS for Speakers */
+  .col{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .row{
+    margin: 5vw auto 5vw auto;
+    width: 100%;
+    display: flex;
+    text-align: center;
+   
+  }
+  .speaker{
+    margin: auto;
+    padding-bottom: 10px;
+    width: 25%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .speaker img{
+    width: 100%;
+    
+  }
+  .speaker h3{
+    color: #3B82F6;
+    font-style: 'inria serif';
+    font-size: 2vw;
+  }
+  .speaker li{
+    list-style-type: none;
+  }
+  .speaker a{
+    color: #3B82F6;
+    text-decoration: none;
+    font-style: 'inria serif';
+    font-weight: bold;
+    font-size: 2vw;
+  }
+  .head h1{
+    margin: 5vh 0 2vh 0;
+    text-align: center;
+    color: #3B82F6;
+    font-style: 'inria serif';
+    font-size: 3vw;
+  }
+  .head hr{
+    background-color: #3B82F6;
+    border: none;
+    height: 2px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .head li{
+    margin: 2vh 0 0 2vh;
+    list-style-type: none;
+    color: #3B82F6;
+}
+.head a{
+    color: #3B82F6;
+    text-decoration: none;
+}
+
+  @media screen and (max-width: 800px) {
+    .head h1{
+        font-size: 7vw;
+        margin: 1vh 0 1vh 0;
     }
   }
