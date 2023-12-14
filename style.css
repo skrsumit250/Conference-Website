@@ -149,13 +149,13 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 @media screen and (max-width: 800px) {
-    .Form{
+    .Form-Content{
         width: 100%;
         border: none;
         padding-bottom: 10vh;
         margin: 0;
     }
-    .Form h1{
+    .Form-Content h1{
         font-size: 5vw;
     }
   }
