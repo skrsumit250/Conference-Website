@@ -20,7 +20,7 @@
 }
 .nav{
     width: 30%;
-    background-color:#3B82F6;
+    background-color:#000000;
     height: 85%;
 }
 .nav ul{
@@ -32,11 +32,16 @@
 }
 .nav li{
     margin: 2vw 0 2vw 0;
+    
 }
 .nav a{
     text-decoration: none;
     color: white;
     font-size:2vw;
+}
+.nav a:hover{
+    color: red;
+    text-decoration: none;
 }
 .nav a:hover{
     text-decoration: underline;
@@ -51,11 +56,11 @@
     padding: 2vw;
 }
 .welcome h1{
-    color: #3B82F6;
+    color: #000000;
     font-style: 'inria serif';
 }
 .welcome hr{
-    background-color:#3B82F6;
+    background-color:#000000;
     border: none;
     height: 1px;
 }
@@ -77,30 +82,33 @@
 }
 
 /* CSS for Form  */
-.Form{
+.Form-Content{
     margin: 10% auto auto auto;
     width: 70%;
     border: #ffffff solid 0.5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.Form li{
+.Form-Content li{
     margin: 2vh 0 0 2vh;
     list-style-type: none;
-    color: #3B82F6;
+    color: #000000;
 }
-.Form a{
-    color: #3B82F6;
+.Form-Content a{
+    color: #000000;
     text-decoration: none;
 }
-.Form h1{
+.Form-Content a:hover{
+    color: red;
+}
+.Form-Content h1{
     margin: 5vh 0 2vh 0;
     text-align: center;
-    color: #3B82F6;
+    color: #000000;
     font-style: 'inria serif';
     font-size: 3vw;
 }
-.Form hr{
-    background-color: #3B82F6;
+.Form-Content hr{
+    background-color: #000000;
     border: none;
     height: 2px;
     width: 50%;
@@ -171,7 +179,7 @@ input[type="submit"]:hover {
   .speaker{
     margin: auto;
     padding-bottom: 10px;
-    width: 25%;
+    width: 20%;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -180,29 +188,32 @@ input[type="submit"]:hover {
     
   }
   .speaker h3{
-    color: #3B82F6;
+    color: #000000;
     font-style: 'inria serif';
-    font-size: 2vw;
+    font-size: 1vw;
   }
   .speaker li{
     list-style-type: none;
   }
   .speaker a{
-    color: #3B82F6;
+    color: red;
     text-decoration: none;
     font-style: 'inria serif';
     font-weight: bold;
     font-size: 2vw;
   }
+  .speaker a:hover{
+    color: black;
+  }
   .head h1{
     margin: 5vh 0 2vh 0;
     text-align: center;
-    color: #3B82F6;
+    color: #000000;
     font-style: 'inria serif';
     font-size: 3vw;
   }
   .head hr{
-    background-color: #3B82F6;
+    background-color: #000000;
     border: none;
     height: 2px;
     width: 40%;
@@ -212,13 +223,15 @@ input[type="submit"]:hover {
   .head li{
     margin: 2vh 0 0 2vh;
     list-style-type: none;
-    color: #3B82F6;
+    color: #000000;
 }
 .head a{
-    color: #3B82F6;
+    color: #000000;
     text-decoration: none;
 }
-
+.head a:hover{
+    color: red;
+  }
   @media screen and (max-width: 800px) {
     .head h1{
         font-size: 7vw;
