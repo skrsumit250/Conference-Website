@@ -68,17 +68,60 @@
     padding: 1vw 0 1vw 0;
     
 }
+.venue{
+    margin: 4vw;
+    display: flex;
+}
+.venue-description{
+    width: 50%;
+    height: auto;
+    padding-right: 5vw;
+}
 .video{
+    width: 50%;
     position: relative;
     overflow: hidden;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding: 1vw 1vw 50vh 1vw; /* 16:9 aspect ratio */
     height: 0;
 }
-iframe{
+.video iframe {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
+
+
+.venue hr{
+    background-color:#000000;
+    border: none;
+    height: 1px;
+}
+.venue p{
+    padding: 1vw 0 1vw 0;
+    
+}
+@media screen and (max-width: 1000px) {
+    .venue{
+        flex-direction: column;
+        margin-right: 4vw 5vw 4vw 4vw;
+    }
+    .venue-description{
+        width: 100%;
+        padding: 1vw;
+    }
+    .video{
+        width: 100%;
+        padding-bottom: 50vw;
+    }
+    .video iframe{
+        width: 100%;
+        display: block;
+        padding: 1vw;
+        padding-right: 1vw;
+    }
+  }
 .Sponsers{
     width: 100%;
     min-height: 30vh;
