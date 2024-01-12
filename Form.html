@@ -13,7 +13,7 @@
         <h1>Registration Form</h1>
         <hr>
         <div class="form-container">
-            <form action="#">
+            <form name="email_sub">
                 <label for="name">Name</label>
                 <input type="text" name="name">
 
@@ -23,12 +23,58 @@
                 <label for="contact">Contact</label>
                 <input type="text" name="contact">
 
-                <label for="name">Organization/Company</label>
+                <label for="company">Organization/Company</label>
                 <input type="text" name="company">
 
+                <label for="registration_type">Register as</label>
+                <select id="registration_type" name="registration_type" onchange="toggleAbstract()">
+                    <option value="attendee">Attendee</option>
+                    <option value="speaker">Speaker</option>
+                </select>
+
+                <label for="abstract" id="abstract_label" style="display:none;">Abstract</label>
+                <textarea name="abstract" id="abstract" cols="30" rows="10" placeholder="Type or Copy your Abstract here....." style="display:none;"></textarea>
+
+                <input type="hidden" name="form_type" id="form_type" value="attendee"> <!-- Default value, will be updated by JavaScript -->
+                <br>
                 <input type="submit" name="" id="">
             </form>
         </div>
     </section>
+
+    <script>
+        function toggleAbstract() {
+        var registrationType = document.getElementById('registration_type').value;
+        var formTypeInput = document.getElementById('form_type');
+        var abstractLabel = document.getElementById('abstract_label');
+        var abstractTextarea = document.getElementById('abstract');
+
+        if (registrationType === 'speaker') {
+            formTypeInput.value = 'speaker';
+            abstractLabel.style.display = 'block';
+            abstractTextarea.style.display = 'block';
+        } else {
+            formTypeInput.value = 'attendee';
+            abstractLabel.style.display = 'none';
+            abstractTextarea.style.display = 'none';
+        }
+    }
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxBTKgMxAoSTvb7VfP_59LrTJXQs6p2xwlpUnjcpOB2F4RkJ4pvUpmFFVNJBxQ-6IJs/exec'
+        const form = document.forms['email_sub']
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(res => {
+                // window.location.href = "index.html";
+                alert('Form Submitted')
+                location.reload();
+          })
+            .catch(error => {
+              console.error('Error!', error.message);
+              alert('Error : submission unsuccesfull');
+            })
+            .then( a => (form.reset()));
+        })
+    </script>
 </body>
 </html>

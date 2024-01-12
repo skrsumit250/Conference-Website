@@ -186,7 +186,7 @@ form {
 label {
     margin-bottom: 8px;
 }
-input {
+input,select {
     padding: 10px;
     margin-bottom: 16px;
     border: 1px solid #ccc;
@@ -202,6 +202,11 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #45a049;
 }
+textarea{
+    padding: 1vw;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 @media screen and (max-width: 800px) {
     .Form-Content{
         width: 100%;
@@ -211,6 +216,9 @@ input[type="submit"]:hover {
     }
     .Form-Content h1{
         font-size: 5vw;
+    }
+    .form-container{
+        max-width: 80%;
     }
   }
 
