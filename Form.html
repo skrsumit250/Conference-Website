@@ -29,16 +29,16 @@
         <div class="form-container">
             <form name="email_sub">
                 <label for="name">Name</label>
-                <input type="text" name="name">
+                <input type="text" name="name" required>
 
                 <label for="email">Email</label>
-                <input type="text" name="email">
+                <input type="text" name="email" required>
 
                 <label for="contact">Contact</label>
                 <input type="text" name="contact">
 
                 <label for="company">Organization/Company</label>
-                <input type="text" name="company">
+                <input type="text" name="company" required>
 
                 <label for="registration_type">Register as</label>
                 <select id="registration_type" name="registration_type" onchange="toggleAbstract()">
@@ -47,7 +47,7 @@
                 </select>
 
                 <label for="abstract" id="abstract_label" style="display:none;">Abstract</label>
-                <textarea name="abstract" id="abstract" cols="30" rows="10" placeholder="Type or Copy your Abstract here....." style="display:none;"></textarea>
+                <textarea required name="abstract" id="abstract" cols="30" rows="10" placeholder="Type or Copy your Abstract here....." style="display:none;"></textarea>
 
                 <input type="hidden" name="form_type" id="form_type" value="attendee">
                 <br>
