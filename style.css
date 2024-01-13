@@ -279,6 +279,13 @@ textarea{
     .toggle{
         margin: 0;
     }
+    .nav-form{
+        width: 25%;
+        padding: 3vw;
+    }
+    .nav-form li{
+        font-size: 2vw;
+    }
   }
 
 
