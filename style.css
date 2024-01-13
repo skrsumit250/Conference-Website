@@ -281,10 +281,10 @@ textarea{
     }
     .nav-form{
         width: 25%;
-        padding: 3vw;
+        padding: 5vw 3vw 5vw 3vw;
     }
     .nav-form li{
-        font-size: 2vw;
+        font-size: 4vw;
     }
   }
 
