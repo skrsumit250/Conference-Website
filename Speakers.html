@@ -10,8 +10,22 @@
     <div class="Banner">
         <img src="assets/Banner.jpg" id="Banner">
     </div>
+    <div class="toggle">
+        <button onclick="toggleButtons()" id="button1"><img src="assets/menu.png"></button>
+        <button onclick="toggleButtons()" id="button2" style="display: none;"><img src="assets/close.png"></button>
+        <div class="nav-form" id="nav-form" style="display: none;">
+            <ul>
+                <hr>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Meeting.html">Meeting Information</a></li>
+                <li><a href="Schedule.html">Schedule</a></li>
+                <li><a href="Speakers.html">Speakers</a></li>
+                <li><a href="Form.html">Registration</a></li>
+                <hr>
+            </ul>
+        </div>
+    </div>
     <div class="head">
-        <li><a target="_blank" href="index.html">Back to Home</a></li>
         <h1>Speakers</h1>
         <hr>
     </div>
@@ -140,5 +154,24 @@
             </div>
         </div>
     </section>
+    <script>
+        function toggleButtons() {
+        var button1 = document.getElementById('button1');
+        var button2 = document.getElementById('button2');
+        var navForm = document.getElementById('nav-form');
+
+        if (button1.style.display !== 'none') {
+            // Button 1 is visible, hide it and show Button 2 and nav-form
+            button1.style.display = 'none';
+            button2.style.display = 'block';
+            navForm.style.display = 'block';
+        } else {
+            // Button 2 and nav-form are visible, hide them and show Button 1
+            button1.style.display = 'block';
+            button2.style.display = 'none';
+            navForm.style.display = 'none';
+        }
+    }
+    </script>
 </body>
 </html>
