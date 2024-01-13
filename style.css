@@ -46,6 +46,8 @@
 .nav a:hover{
     text-decoration: underline;
 }
+
+/* CSS for toggle  */
 .nav-form{
     width: 22%;
     background-color:#000000;
