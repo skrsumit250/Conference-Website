@@ -47,11 +47,9 @@
                 </select>
 
                 <label for="abstract" id="abstract_label" style="display:none;">Abstract</label>
-                <textarea required name="abstract" id="abstract" cols="30" rows="10" placeholder="Type or Copy your Abstract here....." style="display:none;"></textarea>
-
-                <input type="hidden" name="form_type" id="form_type" value="attendee">
+                <textarea name="abstract" id="abstract" cols="30" rows="10" placeholder="Type or Copy your Abstract here....." style="display:none;"></textarea>
                 <br>
-                <input type="submit" name="" id="">
+                <input type="submit" name="" id="submit">
             </form>
         </div>
     </section>
@@ -76,23 +74,25 @@
         }
         function toggleAbstract() {
             var registrationType = document.getElementById('registration_type').value;
-            var formTypeInput = document.getElementById('form_type');
             var abstractLabel = document.getElementById('abstract_label');
             var abstractTextarea = document.getElementById('abstract');
 
             if (registrationType === 'speaker') {
-                formTypeInput.value = 'speaker';
                 abstractLabel.style.display = 'block';
                 abstractTextarea.style.display = 'block';
+                abstractTextarea.setAttribute('required', 'required');
             } else {
-                formTypeInput.value = 'attendee';
                 abstractLabel.style.display = 'none';
                 abstractTextarea.style.display = 'none';
+                abstractTextarea.removeAttribute('required', 'required');
             }
         }
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxBTKgMxAoSTvb7VfP_59LrTJXQs6p2xwlpUnjcpOB2F4RkJ4pvUpmFFVNJBxQ-6IJs/exec'
         const form = document.forms['email_sub']
         form.addEventListener('submit', e => {
+            var button=document.getElementById('submit');
+            button.style.backgroundColor="red";
+            button.style.border = "1px solid black";
           e.preventDefault();
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(res => {
@@ -102,7 +102,7 @@
           })
             .catch(error => {
               console.error('Error!', error.message);
-              alert('Error : submission unsuccesfull');
+              alert('Error : submission unsuccesfull \n Try again.....');
             })
             .then( a => (form.reset()));
         })
