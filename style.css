@@ -3,39 +3,15 @@
     padding: 0;
     font-family: Arial, sans-serif;
 }
-.typewriter{
-    position: absolute;
-    top: 28vw;
-    left: 30vw;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-.typewriter p {
-    font-size: 5vw;
-    color: white;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: 1px solid white; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
-}
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
- 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: white }
-}
-
 .Banner{
     position: relative;
     width: 100%;
     height: auto;
 }
 .Banner img {
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
     height: 100%;
     object-fit: cover; 
     display: block;
@@ -51,10 +27,7 @@
 }
 .nav ul{
     list-style-type: none;
-    margin-left: 2vw;
-    margin-top: 6vw;
-    margin-bottom: 6vw;
-    margin-right: 2vw;
+    margin: 4vw 2vw 4vw 2vw;
 }
 .nav li{
     margin: 2vw 0 2vw 0;
@@ -83,10 +56,7 @@
 }
 .nav-form ul{
     list-style-type: none;
-    margin-left: 2vw;
-    margin-top: 6vw;
-    margin-bottom: 6vw;
-    margin-right: 2vw;
+    margin: 4vw 2vw 4vw 2vw;
 }
 .nav-form li{
     margin: 2vw 0 2vw 0;
@@ -344,7 +314,7 @@ textarea{
   .speaker h3{
     color: #000000;
     font-style: 'inria serif';
-    font-size: 1vw;
+    font-size: 1.7vw;
   }
   .speaker li{
     list-style-type: none;
@@ -380,3 +350,15 @@ margin-right: auto;
         margin: 1vh 0 1vh 0;
     }
   }
+
+  /* Schedule */
+.schedule{
+    width: 60%;
+    margin: 5vw;
+}
+.timeline{
+    margin: 2vw;
+}
+.timeline li{
+    font-size: 2vw;
+}

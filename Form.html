@@ -8,7 +8,7 @@
 </head>
 <body>
     <section class="Form-Content">
-        <div class="Banner"><img src="assets/Banner.jpg" alt=""></div>
+        <div class="Banner"><img src="assets/BGK.png" alt=""></div>
         <div class="toggle-form">
             <button onclick="toggleButtons()" id="button1"><img src="assets/menu.png"></button>
             <button onclick="toggleButtons()" id="button2" style="display: none;"><img src="assets/close.png"></button>
@@ -16,7 +16,6 @@
                 <ul>
                     <hr>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="Meeting.html">Meeting Information</a></li>
                     <li><a href="schedule.html">Abstract</a></li>
                     <li><a href="Speakers.html">Speakers</a></li>
                     <li><a href="Form.html">Registration</a></li>
@@ -87,25 +86,7 @@
                 abstractTextarea.removeAttribute('required', 'required');
             }
         }
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxBTKgMxAoSTvb7VfP_59LrTJXQs6p2xwlpUnjcpOB2F4RkJ4pvUpmFFVNJBxQ-6IJs/exec'
-        const form = document.forms['email_sub']
-        form.addEventListener('submit', e => {
-            var button=document.getElementById('submit');
-            button.style.backgroundColor="red";
-            button.style.border = "1px solid black";
-          e.preventDefault();
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(res => {
-                // window.location.href = "index.html";
-                alert('Form Submitted')
-                location.reload();
-          })
-            .catch(error => {
-              console.error('Error!', error.message);
-              alert('Error : submission unsuccesfull \n Try again.....');
-            })
-            .then( a => (form.reset()));
-        })
+        
     </script>
 </body>
 </html>
